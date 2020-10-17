@@ -1,0 +1,143 @@
+
+{% extends 'website/base.html '%}
+{% load static %}
+{% block content %}
+
+<div class="row m-1 mt-3 card">
+  <div class="card-header bg-info text-white">Top Grossing</div>
+  <div class="card-body w-100">
+    <ul id="slider1" class="cs-hidden">
+    {% for product in products %}
+      <li class="item-a">
+        <div class="box">
+          <div class="img-box">
+            <!-- <div></div> -->
+            <img src="{{product.image.url }}"/>
+            <button class="buy-btn" id="{{ product.id}}" value="{{product.price}}">Add to Cart</button>
+          </div>
+          <div class="desc-box">
+            <div
+              class="type"
+              style="
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+              "
+            >
+              <span>{{ product.name | title }}</span>
+              <a href="#">{{ product.category | title  }}</a>
+            </div>
+            <span>Rs.{{ product.price }}</span>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+      </ul>
+
+  </div>
+</div>
+<!---->
+<div class="row m-1 mt-3 card">
+  <div class="card-header bg-info text-white">Best Sellers</div>
+  <div class="card-body w-100">
+    <ul id="slider2" class="cs-hidden">
+    {% for product in products %}
+      <li class="item-a">
+        <div class="box">
+          <div class="img-box">
+            <!-- <div></div> -->
+            <img src="{{product.image.url }}"/>
+            <button class="buy-btn" id="{{ product.id}}" value="{{product.price}}">Add to Cart</button>
+          </div>
+          <div class="desc-box">
+            <div
+              class="type"
+              style="
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+              "
+            >
+              <span>{{ product.name | title }}</span>
+              <a href="#">{{ product.category | title  }}</a>
+            </div>
+            <span>Rs.{{ product.price }}</span>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+      </ul>
+
+  </div>
+</div>
+
+<div class="row m-1 mt-3 card">
+  <div class="card-header bg-info text-white">Popular in Electronics</div>
+  <div class="card-body w-100">
+    <ul id="slider3" class="cs-hidden">
+    {% for product in watches %}
+      <li class="item-a">
+        <div class="box">
+          <div class="img-box">
+            <!-- <div></div> -->
+            <img src="{{product.image.url }}"/>
+            <button class="buy-btn" id="{{product.id}}" value="{{product.price}}">Add to Cart</button>
+          </div>
+          <div class="desc-box">
+            <div
+              class="type"
+              style="
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+              "
+            >
+              <span>{{ product.name | title }}</span>
+              <a href="#">{{ product.category | title  }}</a>
+            </div>
+            <span>Rs.{{ product.price }}</span>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+      </ul>
+
+  </div>
+</div>
+
+<div class="row m-1 mt-3 card">
+  <div class="card-header bg-info text-white">Popular in Footwares</div>
+  <div class="card-body w-100">
+    <ul id="slider4" class="cs-hidden">
+    {% for product in shoes %}
+      <li class="item-a">
+        <div class="box">
+          <div class="img-box">
+            <!-- <div></div> -->
+            <img src="{{product.image.url }}"/>
+            <button class="buy-btn" id="{{ product.id }}" value="{{product.price}}">Add to Cart</button>
+          </div>
+          <div class="desc-box">
+            <div
+              class="type"
+              style="
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+              "
+            >
+              <span>{{ product.name | title }}</span>
+              <a href="#">{{ product.category | title  }}</a>
+            </div>
+            <span>Rs.{{ product.price }}</span>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+      </ul>
+
+  </div>
+</div>
+
+{% endblock %}
+
