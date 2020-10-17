@@ -7,3 +7,4 @@ Requirements:
 3)pillow library to work with images
 3)jQuerry version 3.5.1
 6)Bootstrap version 4.0
+
